@@ -1,4 +1,4 @@
-# 📰 News Intelligence Pipeline
+# 📰 News scraper Pipeline
 
 > Collect news. Clean the noise. Store structured insights.
 
