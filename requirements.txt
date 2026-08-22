@@ -1,0 +1,5 @@
+feedparser==6.0.14
+requests==2.34.2
+beautifulsoup4==4.15.0
+psycopg2-binary==2.9.12
+playwright

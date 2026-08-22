@@ -1,0 +1,21 @@
+# Local secrets
+pipeline/config.py
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Runtime state and logs
+pipeline/*.log
+pipeline/url_cache.json
+pipeline/failed_articles.json
+pipeline/enrich_run.err.log
+pipeline/enrich_run.log
+
+# Intermediate data; final cleaned outputs are versioned
+pipeline/raw_news_articles.csv
+pipeline/raw_news_articles.json
+pipeline/news_articles_enriched.csv
+pipeline/news_articles_enriched.json
