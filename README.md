@@ -48,7 +48,7 @@ news-scraping-pipeline/
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-Copy-Item pipeline\config.example.py pipeline\config.py
+Copy-Item config.example.py config.py
 ```
 
 Open `pipeline/config.py` and enter your own PostgreSQL password. Do not upload this file to GitHub.
@@ -58,7 +58,6 @@ Open `pipeline/config.py` and enter your own PostgreSQL password. Do not upload 
 The final dataset is already available in CSV and JSON. To create/export it to PostgreSQL:
 
 ```powershell
-cd pipeline
 python main.py --phase export-db
 ```
 
@@ -67,7 +66,7 @@ This creates the `news_db` database (if needed) and inserts the cleaned records 
 ## 🐘 Restore the Included Database Backup
 
 ```powershell
-& "C:\Program Files\PostgreSQL\18\bin\psql.exe" -U postgres -d news_db -f database\news_db_backup.sql
+& "C:\Program Files\PostgreSQL\18\bin\psql.exe" -U postgres -d news_db -f news_db_backup.sql
 ```
 
 ## 🔎 Explore the Data
